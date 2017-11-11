@@ -55,7 +55,31 @@ function Toast(text, time) {
     }, time - 400);
 }
 
+/*
 
+数组去重
+*/
+function uniq(array) {
+    var temp = [];
+    var l = array.length;
+    for (var i = 0; i < l; i++) {
+        console.log(12312312, i)
+        for (var j = i + 1; j < l; j++) {
+            if (array[i] === array[j]) {
+                i++;
+                // j = i;
+            }
+        }
+        temp.push(array[i]);
+    }
+    return temp;
+}
+
+let arr = [1,2,3,3,1,2];
+console.log(arr);
+let set = new Set(arr);
+arr = Array.from(set);
+console.log(arr);
 /*
 
 */
