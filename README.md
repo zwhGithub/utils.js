@@ -11,3 +11,4 @@
 	recoverScroll.js  //禁止页面滚动
 	function_.js  //一些常用js的方法 获取地址参数 数组去重
 	function_.js  //样式js  弹框
+	```
