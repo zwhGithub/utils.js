@@ -20,21 +20,21 @@ removeCookie(name) {
     this.setCookie(name, 1, -1);
 }
 
-//hasClass() 
-Object.prototype.hasClass = function(cName){ 
- return !!this.className.match( new RegExp( "(\\s|^)" + cName + "(\\s|$)") ); 
-} 
-//addClass() 
-Object.prototype.addClass = function(cName){ 
- if( !this.hasClass( cName ) ){ 
-  this.className += " " + cName; 
- } 
- return this; 
-} 
-//removeClass() 
-Object.prototype.removeClass = function(cName){ 
- if( this.hasClass( cName ) ){ 
-  this.className = this.className.replace( new RegExp( "(\\s|^)" + cName + "(\\s|$)" )," " ); 
- } 
- return this; 
+//hasClass()
+Object.prototype.hasClass = function(cName){
+ return !!this.className.match( new RegExp( "(\\s|^)" + cName + "(\\s|$)") );
+}
+//addClass()
+Object.prototype.addClass = function(cName){
+ if( !this.hasClass( cName ) ){
+  this.className += " " + cName;
+ }
+ return this;
+}
+//removeClass()
+Object.prototype.removeClass = function(cName){
+ if( this.hasClass( cName ) ){
+  this.className = this.className.replace( new RegExp( "(\\s|^)" + cName + "(\\s|$)" )," " );
+ }
+ return this;
 }
