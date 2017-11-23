@@ -36,8 +36,7 @@ function uniq(array) {
 
 let arr = [1, 2, 3, 3, 1, 2];
 console.log(arr);
-let set = new Set(arr);
-arr = Array.from(set);
+arr = Array.from(new Set(arr));
 console.log(arr);
 /*
 
