@@ -38,3 +38,5 @@ Object.prototype.removeClass = function(cName){
  }
  return this;
 }
+
+document.getElementById("aa").setAttribute("type","button");
