@@ -1,7 +1,8 @@
 ### JavaScript 开发常用方法总结
+
 1
 
-- 获取地址URL地址栏的的参数
+* 获取地址 URL 地址栏的的参数
 
 ```
 function getRequestData(key) {
@@ -21,7 +22,7 @@ function getRequestData(key) {
 // 然后   getRequestData("age") == 18
 ```
 
-- js数组去重
+* js 数组去重
 
 ```
 function uniq(array, key) {
@@ -48,7 +49,7 @@ let arr = [1, 2, 3, 1];
 arr = Array.from(new Set(arr));  //去除重复的1
 ```
 
-- js 存入 获取 删除 Cookie
+* js 存入 获取 删除 Cookie
 
 ```
 //设置cook  iDay表示具体过期的天数
@@ -76,7 +77,7 @@ removeCookie(name) {
 }
 ```
 
-- H5设置手机端rem
+* H5 设置手机端 rem
 
 ```
 (function(doc, win) {
@@ -95,10 +96,10 @@ removeCookie(name) {
     doc.addEventListener('DOMContentLoaded', recalc, false);
 })(document, window);
 
-// 以苹果6的尺寸为标准  然后 10px = 0.1rem 
+// 以苹果6的尺寸为标准  然后 10px = 0.1rem
 ```
 
-- 移动端禁止滑动 
+* 移动端禁止滑动
 
 ```
 function preventPageScroll(e) {
@@ -110,7 +111,8 @@ document.addEventListener('touchmove', preventPageScroll, true); //取消禁止�
 // 用浏览器调试无法显示效果  安卓和ios手机能很好的兼容
 // 相比overflow = hidden 的方法  上述方法不会出现暴力滑动的一些问题
 ```
-###  原生js封装的jquery方法  高性能
+
+### 原生 js 封装的 jquery 方法 高性能
 
 ```
  function $(dom) {
@@ -151,10 +153,10 @@ document.addEventListener('touchmove', preventPageScroll, true); //取消禁止�
 // 支持  选中dom $("#id")  $(".class")   $(div)  $("#a .b")  $(".a .b .c")   $("#a div")
 // 上述的选中dom返回原生js选中的dom对象
 // 还支持  $("#id").addClass("a")  $("#id").removeClass("a")
-		  $("#id").hasClass("a")  //返回布尔值 
+		  $("#id").hasClass("a")  //返回布尔值
 ```
 
-- 原生js封装的弹框
+* 原生 js 封装的弹框
 
 ```
   function Toast(text, time) {
@@ -198,7 +200,7 @@ document.addEventListener('touchmove', preventPageScroll, true); //取消禁止�
 
 ![提示框效果](https://qiniu.epipe.cn/5430920025722585088?imageView2/1/w/320/h/568)
 
-### 原生js时间格式化    
+### 原生 js 时间格式化
 
 ```
 function Moment(date) {
@@ -248,11 +250,8 @@ function Moment(date) {
 }
 
 // 使用方法
-// 	Moment().format('YYYY-MM-DD hh:mm:ss WW');格式化当前时间 
+// 	Moment().format('YYYY-MM-DD hh:mm:ss WW');格式化当前时间
 	返回  "2017-12-12 10:25:10 星期五"
-//	Moment()里面可以传入时间 Moment("2017-12-19").format('YYYY-MM-DD hh:mm:ss WW') 
+//	Moment()里面可以传入时间 Moment("2017-12-19").format('YYYY-MM-DD hh:mm:ss WW')
     格式化传入时间
 ```
-
-
-
